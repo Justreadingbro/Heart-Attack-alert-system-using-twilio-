@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Alert System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Heart Attack Alert System</h1>
+    <form id="alertForm">
+        <input type="text" id="phoneNumber" placeholder="Enter phone number" required>
+        <button type="button" onclick="sendAlert()">Send Alert</button>
+    </form>
+    <p id="status"></p>
+
+    <script>
+        function sendAlert() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    const phoneNumber = document.getElementById('phoneNumber').value;
+
+                    fetch('/alert', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ latitude, longitude, phoneNumber })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('status').textContent = data.message;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('status').textContent = 'Error sending alert';
+                    });
+                });
+            } else {
+                document.getElementById('status').textContent = 'Geolocation is not supported by this browser.';
+            }
+        }
+    </script>
+</body>
+</html>
