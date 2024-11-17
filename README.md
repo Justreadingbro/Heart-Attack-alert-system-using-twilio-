@@ -2,7 +2,7 @@ This is a prototype for Heart attack alert system, which will be implemented in 
 
 # Installation
 
-## For Windows
+## $\textsf{\color{#0e72f5}{For Windows}}$
 
 ### 1. Clone the Repository(h1) first open Command Prompt or PowerShell and clone the project repository:
 
@@ -42,7 +42,7 @@ npm start
 This will start the server on http://localhost:3000.
 
 
-## For Linux (Ubuntu)
+## $\textsf{\color{#f56e0e}{For Linux (Ubuntu)}}$
 
 ### 1. Clone the Repository
    
