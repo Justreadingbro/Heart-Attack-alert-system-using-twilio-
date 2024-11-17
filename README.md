@@ -2,7 +2,7 @@ This is a prototype for Heart attack alert system, which will be implemented in 
 
 # Installation
 
-## <code style="color:blue;">For Windows</code>
+## <code style="color : blue;">For Windows</code>
 
 ### 1. Clone the Repository(h1) first open Command Prompt or PowerShell and clone the project repository:
 
