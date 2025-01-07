@@ -83,3 +83,8 @@ After installing dependencies and setting up the .env file, you can start the se
 npm start
 ```
 This will start the server on http://localhost:3000.
+<a href="https://github.com/Justreadingbro/Heart-Attack-alert-system-using-twilio-/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Justreadingbro/Heart-Attack-alert-system-using-twilio-" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
